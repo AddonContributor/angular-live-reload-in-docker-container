@@ -2,6 +2,7 @@ version: '3'
 services:
   ngserve:
     image: node
+    working_dir: /app
     command: bash -c "cd /app && yarn install --ignore-engines && yarn global add @angular/cli && yarn start"
     volumes:
         - ./testngapp:/app
